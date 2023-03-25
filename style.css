@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/* 0px to 768px */
+*, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Montserrat', 'Fraunces', sans-serif;
+    
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-gray-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--cream);
+}
+footer {
+    font-size: 11px;
+    text-align: center;
+}
+footer a { color: hsl(228, 45%, 44%); }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    width: 350px;
+    margin: 10px auto;
+    padding-bottom: 20px;
+    height: 100vh;
+}
+.card {
+    background-color: var(--white);
+    display: flex;
+    /* flex-basis: 80%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.chanel-img {
+    width: 100%;
+    height: 100%;
+}
+
+#mobile-size {
+    width: 100%;
+    height: 100%;
+}
+
+#full-size {
+    display: none;
+}
+
+.info h2 {
+    color: var(--dark-gray-blue);
+    letter-spacing: 4px;
+    font-size: 12px;
+    padding: 20px;
+    padding-bottom: 10px;
+    font-weight: lighter;
+}
+
+.info h1 {
+    text-align: left;
+    font-size: 32px;
+    font-family: 'Fraunces', sans-serif;
+    color: var(--very-dark-blue);
+    padding-left: 20px;
+    padding-right: 12px;
+}
+
+.info #description {
+    padding: 20px;
+    padding-top: 10px;
+    /* margin: 20px; */
+    color: var(--dark-gray-blue);
+    font-weight: lighter;
+    line-height: 25px;
+}
+
+.price {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.price #discount {
+    font-size: 32px;
+    margin-right: 10px;
+    font-family: 'Fraunces', sans-serif;
+    color:var(--dark-cyan);
+}
+
+.price #realp {
+    color: var(--dark-gray-blue);
+    text-decoration: line-through;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn-container button {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 5px;
+    margin-bottom: 30px;
+    width: 90%;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button i {
+    margin-right: 10px;
+}
+
+.btn-container button:hover {
+    background-color: hsl(158, 37%, 23%);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: var(--cream);
+        overflow: hidden;
+    }
+
+    footer {
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        transform: translateX(-50%);
+    }
+
+    main {
+        max-width: none;
+        width: 700px;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: row;
+        overflow: none;
+    }
+    #mobile-size {
+        display: none;
+    }
+    
+    .chanel-img {
+        width: 100%;
+    }
+    
+    #full-size {
+        display: inherit;
+        width: 100%;
+    }
+    
+    .info {
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        margin: 0px auto;
+    }
+
+    .info h2 {
+        color: var(--dark-gray-blue);
+        letter-spacing: 4px;
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+    
+    .info h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    
+    .info #description {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .price {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .btn-container button {
+        padding: 18px;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px 5px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+    }
+}
